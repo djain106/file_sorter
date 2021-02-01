@@ -14,14 +14,15 @@ def file_extension(file_name):
 
 
 # Folders to create/place into
-file_types = ['\exe', '\doc', '\pdf', '\images', '\misc', '\zip']
+file_types = ['/exe', '/doc', '/pdf', '/images',
+              '/misc', '/zip', '/sheets', '/video']
 
 for ftype in file_types:
     if not os.path.exists(sort_path + ftype):
         os.makedirs(sort_path + ftype)
 
 type_mappings = {'png': 'images', 'jpg': 'images', 'jpeg': 'images', 'pdf': 'pdf', 'exe': 'exe',
-                 'doc': 'doc', 'docx': 'doc', 'zip': 'zip', 'rar': 'zip'}
+                 'doc': 'doc', 'docx': 'doc', 'zip': 'zip', 'rar': 'zip', 'mp4': 'video'}
 
 for file_name in os.listdir(sort_path):
     extension = file_extension(file_name)
