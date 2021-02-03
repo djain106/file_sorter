@@ -32,3 +32,12 @@ for file_name in os.listdir(sort_path):
         continue
     new_path = [sort_path, folder_name, file_name]
     shutil.move("/".join(old_path), "/".join(new_path))
+
+# Add feature for selecting more file types
+new_file_type = input('What is the new file type? (None if no new file types)')
+new_type = new_file_type.lower() != 'none'
+while new_type:
+
+    new_file_type = input(
+        'What is the new file type? (None if no new file types) \n')
+    new_type = new_file_type.lower() != 'none'
